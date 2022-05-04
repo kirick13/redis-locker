@@ -1,0 +1,32 @@
+{
+	"name": "@kirick/redis-locker",
+	"version": "0.1.0-beta.1",
+	"description": "Simple lock system based on Redis.",
+	"publishConfig": {
+		"access": "public",
+		"tag": "beta"
+	},
+	"main": "main.js",
+	"engines": {
+		"node": ">=10.0.0"
+	},
+	"dependencies": {
+		"oh-my-props": "^2.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/kirick13/redis-locker.git"
+	},
+	"keywords": [
+		"lock",
+		"locker",
+		"redis",
+		"no-race"
+	],
+	"author": "Daniil Kirichenko (https://twitter.com/kirickme)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/kirick13/redis-locker/issues"
+	},
+	"homepage": "https://github.com/kirick13/redis-locker#readme"
+}
