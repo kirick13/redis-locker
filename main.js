@@ -1,14 +1,13 @@
 
-const RedisClient     = require('@kirick/redis-client/src/client');
-// const { randomBytes } = require('crypto');
-const OhMyProps       = require('oh-my-props');
+const RedisClient = require('@kirick/redis-client/src/client');
+const OhMyProps   = require('oh-my-props');
 
 const isPlainObject = (value) => value && typeof value === 'object' && value.constructor === Object;
 const setTimeoutAsync = (time) => new Promise(resolve => {
     setTimeout(resolve, time);
 });
 
-const REDIS_KEY_PREFIX = 'locker:';
+const REDIS_KEY_PREFIX = '@locker:';
 
 const optionsProps = new OhMyProps({
     ttl: {
@@ -142,7 +141,6 @@ class RedisLocker {
                     const error = new Error(`Cannot lock key "${keys[0]}".`);
                     error.code = 'LOCKED';
                     error.source = '@kirick/redis-locker';
-
                     throw error;
                 }
             }
